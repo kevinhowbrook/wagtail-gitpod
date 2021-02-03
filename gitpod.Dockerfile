@@ -1,5 +1,4 @@
-FROM gitpod/workspace-postgres
-
+FROM gitpod/workspace-full:latest
 USER root
 
 RUN curl https://cli-assets.heroku.com/install.sh 14 | sh
