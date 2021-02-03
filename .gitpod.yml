@@ -3,6 +3,11 @@ ports:
   onOpen: open-preview
 tasks:
 - init: >
+    curl -sSL https://cli-assets.heroku.com/install-ubuntu.sh | sh &&
+    curl -sSL https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o /tmp/awscli-bundle.zip &&
+    unzip -q /tmp/awscli-bundle.zip -d /tmp &&
+    /tmp/awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws &&
+    rm -rf /tmp/awscli-bundle.zip /tmp/awscli-bundle &&
     python -m pip install wagtail &&
     wagtail start mysite . &&
     python -m pip install -r requirements.txt &&
