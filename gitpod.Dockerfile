@@ -18,4 +18,4 @@ USER gitpod
 
 # Remove the remotes autoset
 RUN git remote remove origin
-RUN git remote remove upstrem
+RUN git remote remove upstream
