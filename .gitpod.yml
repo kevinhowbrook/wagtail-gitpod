@@ -7,6 +7,7 @@ tasks:
 - init: >
     git remote remove origin &&
     git remote remove upstream &&
+    rm README.md &&
     python -m pip install wagtail &&
     wagtail start mysite . &&
     python -m pip install -r requirements.txt &&
