@@ -15,6 +15,3 @@ RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 
 USER gitpod
-
-# Remove the remotes autoset
-RUN git remote -v
